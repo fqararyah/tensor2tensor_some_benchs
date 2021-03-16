@@ -60,7 +60,7 @@ hparams.learning_rate = ALPHA
 
 # Can see all Hparams with code below
 #print(json.loads(hparams.to_json())
-gpus = 1
+gpus = 1 #should be changed only for MTF but not for ParDNN. ParDNN implicitly devides the model depending only on the placement file.
 if len(sys.argv) >= 5:
   gpus = int(sys.argv[4])
 
